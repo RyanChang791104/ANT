@@ -63,7 +63,7 @@ namespace ANT_
                 throw new Exception("Error assigning channel\n");
 
             RichBox_Result.AppendText("Setting Channel ID...\n");
-            if (channel0.setChannelID(0, false, 0, 0, 500))  // Not using pairing bit
+            if (channel0.setChannelID(0, false, 11, 5, 500))  // Not using pairing bit
                 RichBox_Result.AppendText("Channel ID set\n");
             else
                 throw new Exception("Error configuring Channel ID\n");
