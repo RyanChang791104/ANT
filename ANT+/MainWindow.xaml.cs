@@ -55,27 +55,27 @@ namespace ANT_
                 RichBox_Result.AppendText("Network key set\n");
             else
                 throw new Exception("Error configuring network key\n");
-
+            
             RichBox_Result.AppendText("Assigning channel...\n");
             if (channel0.assignChannel(channelType, 0, 500))
                 RichBox_Result.AppendText("Channel assigned\n");
             else
                 throw new Exception("Error assigning channel\n");
-
+            
             RichBox_Result.AppendText("Setting Channel ID...\n");
-            if (channel0.setChannelID(0, false, 11, 5, 500))  // Not using pairing bit
+            if (channel0.setChannelID(ushort.Parse(USER_DEVICENUM.Text), false,byte.Parse(USER_DEVICETYPE.Text), byte.Parse(USER_TRANSTYPE.Text), 500))  // Not using pairing bit
                 RichBox_Result.AppendText("Channel ID set\n");
             else
                 throw new Exception("Error configuring Channel ID\n");
 
             RichBox_Result.AppendText("Setting Radio Frequency...\n");
-            if (channel0.setChannelFreq(57, 500))
+            if (channel0.setChannelFreq(byte.Parse(USER_RADIOFREQ.Text), 500))
                 RichBox_Result.AppendText("Radio Frequency set\n");
             else
                 throw new Exception("Error configuring Radio Frequency\n");
 
             RichBox_Result.AppendText("Setting Channel Period...\n");
-            if (channel0.setChannelPeriod(8182, 500))
+            if (channel0.setChannelPeriod(ushort.Parse(USER_CHANNELPERIOD.Text), 500))
                 RichBox_Result.AppendText("Channel Period set\n");
             else
                 throw new Exception("Error configuring Channel Period\n");

@@ -20,30 +20,14 @@
         </Grid>
         <Grid Grid.Column="0" Margin="5">
             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="100*" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
 
-                <StackPanel HorizontalAlignment="Left" Height="599" Margin="10,10,-1,0" VerticalAlignment="Top" Width="281">
 
-                    <TextBox x:Name="USER_ANT_CHANNEL" HorizontalAlignment="Left" Height="23" Margin="141,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
-                    <Label  Content="USER_ANT_CHANNEL" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" />
-                    <TextBox x:Name="USER_DEVICENUM" HorizontalAlignment="Left" Height="23" Margin="141,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
-                    <Label Content="USER_DEVICENUM" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" />
-                    <TextBox x:Name="USER_DEVICETYPE" HorizontalAlignment="Left" Height="23" Margin="141,0,0,0" TextWrapping="Wrap" Text="11" VerticalAlignment="Top" Width="120" />
-                    <Label Content="USER_DEVICETYPE" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" />
-                    <TextBox x:Name="USER_TRANSTYPE" HorizontalAlignment="Left" Height="23" Margin="141,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
-                    <Label Content="USER_TRANSTYPE" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" />
-                    <TextBox x:Name="USER_RADIOFREQ" HorizontalAlignment="Left" Height="23" Margin="141,0,0,0" TextWrapping="Wrap" Text="57" VerticalAlignment="Top" Width="120" />
-                    <Label Content="USER_RADIOFREQ" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" />
-                    <TextBox x:Name="USER_CHANNELPERIOD" HorizontalAlignment="Left" Height="23" Margin="141,0,0,0" TextWrapping="Wrap" Text="8182" VerticalAlignment="Top" Width="120" />
-                    <Label Content="USER_CHANNELPERIOD" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" Width="135" />
-                    <TextBox x:Name="USER_NETWORK_NUM" HorizontalAlignment="Left" Height="23" Margin="141,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
-                    <Label Content="USER_NETWORK_NUM" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" HorizontalAlignment="Left" Width="135" />
-                    <Button x:Name="Start" Content="Start" HorizontalAlignment="Left" Margin="13,30,0,0" VerticalAlignment="Top" Width="123" Height="31" Click="Start_Click" />
-                    <RadioButton x:Name="Master" Content="Master__Transmit" HorizontalAlignment="Left" Margin="150,-40,0,0" VerticalAlignment="Top" />
-                    <RadioButton x:Name="Slave" Content="Slave__Receive" HorizontalAlignment="Left" Margin="150,-10,0,0" VerticalAlignment="Top" />
-                    <Button x:Name="Packet_send" Content="Packet__send" HorizontalAlignment="Left" Margin="13,20,0,0" VerticalAlignment="Top" Width="248" Height="31" Click="Packet_send_Click" />
-                    <ComboBox Name="Packet_combox" Margin="13,20,20.333,0" />
-                    <Button x:Name="Break" Content="Break" HorizontalAlignment="Left" Margin="13,30,0,0" VerticalAlignment="Top" Width="123" Height="31" Click="Break_Click" />
-                </StackPanel>
+
             </Grid>
         </Grid>
         <Grid Grid.Column="1" Margin="5,28,5,5.333">
@@ -65,5 +49,25 @@
         <Menu DockPanel.Dock="Top" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="48" VerticalContentAlignment="Center">
             <MenuItem Name="Dirctory" Header="Log" Click="Output_Click" Width="52" Height="22" VerticalContentAlignment="Center" />
         </Menu>
+        <TextBox x:Name="USER_ANT_CHANNEL" HorizontalAlignment="Left" Height="23" Margin="167,37,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
+        <Label  Content="USER_ANT_CHANNEL" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" Margin="17,40,0,0" Width="136" />
+        <TextBox x:Name="USER_DEVICENUM" HorizontalAlignment="Left" Height="23" Margin="166,88,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
+        <Label Content="USER_DEVICENUM" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" Margin="17,88,0,0" Width="120" />
+        <TextBox x:Name="USER_DEVICETYPE" HorizontalAlignment="Left" Height="23" Margin="167,137,0,0" TextWrapping="Wrap" Text="11" VerticalAlignment="Top" Width="120" />
+        <Label Content="USER_DEVICETYPE" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" Margin="17,137,0,0" Width="118" />
+        <TextBox x:Name="USER_TRANSTYPE" HorizontalAlignment="Left" Height="23" Margin="167,185,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
+        <Label Content="USER_TRANSTYPE" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" Margin="17,185,0,0" Width="116" />
+        <TextBox x:Name="USER_RADIOFREQ" HorizontalAlignment="Left" Height="23" Margin="166,236,0,0" TextWrapping="Wrap" Text="57" VerticalAlignment="Top" Width="120" />
+        <Label Content="USER_RADIOFREQ" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" Margin="17,233,0,0" Width="118" />
+        <TextBox x:Name="USER_CHANNELPERIOD" HorizontalAlignment="Left" Height="23" Margin="166,282,0,0" TextWrapping="Wrap" Text="8182" VerticalAlignment="Top" Width="120" />
+        <Label Content="USER_CHANNELPERIOD" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" Width="144" Margin="17,282,0,0" />
+        <TextBox x:Name="USER_NETWORK_NUM" HorizontalAlignment="Left" Height="23" Margin="167,330,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
+        <Label Content="USER_NETWORK_NUM" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.551" HorizontalAlignment="Left" Width="144" Margin="17,330,0,0" />
+        <Button x:Name="Start" Content="Start" HorizontalAlignment="Left" Margin="39,386,0,0" VerticalAlignment="Top" Width="123" Height="31" Click="Start_Click" />
+        <RadioButton x:Name="Master" Content="Master__Transmit" HorizontalAlignment="Left" Margin="176,377,0,0" VerticalAlignment="Top" />
+        <RadioButton x:Name="Slave" Content="Slave__Receive" HorizontalAlignment="Left" Margin="176,402,0,0" VerticalAlignment="Top" />
+        <Button x:Name="Packet_send" Content="Packet__send" HorizontalAlignment="Left" Margin="38,434,0,0" VerticalAlignment="Top" Width="248" Height="31" Click="Packet_send_Click" />
+        <ComboBox x:Name="Packet_combox" Margin="38,480,14,122.333" />
+        <Button x:Name="Break" Content="Break" HorizontalAlignment="Left" Margin="39,588,0,0" VerticalAlignment="Top" Width="247" Height="31" Click="Break_Click" />
     </Grid>
 </Window>
