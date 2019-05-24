@@ -67,7 +67,7 @@
         <RadioButton x:Name="Master" Content="Master__Transmit" HorizontalAlignment="Left" Margin="176,377,0,0" VerticalAlignment="Top" />
         <RadioButton x:Name="Slave" Content="Slave__Receive" HorizontalAlignment="Left" Margin="176,402,0,0" VerticalAlignment="Top" />
         <Button x:Name="Packet_send" Content="Packet__send" HorizontalAlignment="Left" Margin="38,434,0,0" VerticalAlignment="Top" Width="248" Height="31" Click="Packet_send_Click" />
-        <ComboBox x:Name="Packet_combox" Margin="38,480,14,122.333" />
+        <ComboBox x:Name="Packet_combox" Margin="38,480,14,134.333" />
         <Button x:Name="Break" Content="Break" HorizontalAlignment="Left" Margin="39,588,0,0" VerticalAlignment="Top" Width="247" Height="31" Click="Break_Click" />
     </Grid>
 </Window>
