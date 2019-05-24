@@ -25,9 +25,6 @@
                     <ColumnDefinition Width="100*" />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-
-
-
             </Grid>
         </Grid>
         <Grid Grid.Column="1" Margin="5,28,5,5.333">

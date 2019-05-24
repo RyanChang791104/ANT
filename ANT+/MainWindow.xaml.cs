@@ -1,11 +1,12 @@
 ﻿using ANT_Managed_Library;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Windows;
-using System.Diagnostics;
+
 namespace ANT_
 {
     /// <summary>
@@ -28,7 +29,8 @@ namespace ANT_
         private List<string> packet = new List<string>();
         private string ESN_, SW, IP, MI, MN, COT, time_cost;
         private string AP, Period, AT;
-        bool StartANT = false;
+        private bool StartANT = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -88,13 +90,12 @@ namespace ANT_
             RichBox_Result.AppendText("ANT Configuration successful\n");
             if (channel0.openChannel(500))
             {
-                RichBox_Result.AppendText("Channel "+ USER_ANT_CHANNEL.Text+ " opened\n");
+                RichBox_Result.AppendText("Channel " + USER_ANT_CHANNEL.Text + " opened\n");
             }
             else
             {
                 throw new Exception("Error opening channel\n");
             }
-          
         }
 
         private List<string> Combox_init()
@@ -136,7 +137,9 @@ namespace ANT_
                 RichBox_Result.ScrollToEnd();
             }
         }
-        static int count = 0;
+
+        private static int count = 0;
+
         private void result_display(ANT_Response response)
         {
             new Thread(() =>
@@ -260,7 +263,6 @@ namespace ANT_
                                 "\nAccumulated_Torque: " + Accumulated_Torque;
                             break;
                     }
-
                 }
                 catch { MessageBox.Show("Something has wrong"); }
             }
@@ -282,7 +284,7 @@ namespace ANT_
         private void Break_close()
         {
             RichBox_Result.ScrollToEnd();
-            RichBox_Result.AppendText("Channel"+ USER_ANT_CHANNEL.Text+ " has closed\n");
+            RichBox_Result.AppendText("Channel" + USER_ANT_CHANNEL.Text + " has closed\n");
         }
 
         private void Output_Click(object sender, RoutedEventArgs e)
